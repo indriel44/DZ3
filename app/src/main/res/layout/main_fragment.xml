@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="@dimen/_42dp"
+        android:layout_height="@dimen/_42dp"
+        android:layout_marginTop="@dimen/_36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_coloured" />
+
+    <ImageView
+        android:id="@+id/Settings"
+        android:layout_width="@dimen/_28dp"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginTop="@dimen/_28dp"
+        android:layout_marginEnd="@dimen/_18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/time_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_56dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_18dp"
+        android:text="@string/time_text"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_count" />
+
+    <TextView
+        android:id="@+id/callories_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_72dp"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toStartOf="@+id/dist_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_text" />
+
+    <TextView
+        android:id="@+id/dist_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/_0_00"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_text" />
+
+    <TextView
+        android:id="@+id/speed_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginStart="@dimen/_72dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dist_count"
+        app:layout_constraintTop_toBottomOf="@+id/time_text" />
+
+    <TextView
+        android:id="@+id/callories_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_16dp"
+        android:text="@string/callories"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/callories_count"
+        app:layout_constraintStart_toStartOf="@+id/callories_count"
+        app:layout_constraintTop_toBottomOf="@+id/callories_count" />
+
+    <TextView
+        android:id="@+id/dist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_16dp"
+        android:text="@string/Dist"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/dist_count"
+        app:layout_constraintStart_toStartOf="@+id/dist_count"
+        app:layout_constraintTop_toBottomOf="@+id/dist_count" />
+
+    <TextView
+        android:id="@+id/speed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_16dp"
+        android:text="@string/speed"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/speed_count"
+        app:layout_constraintStart_toStartOf="@+id/speed_count"
+        app:layout_constraintTop_toBottomOf="@+id/speed_count" />
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="@dimen/map_width"
+        android:layout_height="@dimen/map_height"
+        android:layout_marginTop="@dimen/_12sp"
+        app:cornerRadius="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dist_text"
+        app:srcCompat="@drawable/map" />
+
+    <Button
+        android:id="@+id/run_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/_56dp"
+        android:backgroundTint="@color/main"
+        android:fontFamily="@string/font"
+        android:text="@string/start"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sp"
+        app:cornerRadius="@dimen/_12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintStart_toStartOf="@+id/map" />
+</androidx.constraintlayout.widget.ConstraintLayout>

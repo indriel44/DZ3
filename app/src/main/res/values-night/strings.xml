@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DZ3</string>
+    <string name="time">00:00:00</string>
+    <string name="time_text">Время</string>
+    <string name="_0">0</string>
+    <string name="_0_00">0.00</string>
+    <string name="callories">Калории(калор)</string>
+    <string name="Dist">Дистанция(км)</string>
+    <string name="speed">Сред. скор.(км/ч)</string>
+    <string name="start">Старт</string>
+    <string name="blank"> </string>
+    <string name="stats_s">Статистика</string>
+    <string name="profile">Профиль</string>
+    <string name="stats">Прогресс</string>
+    <string name="main">Тренировка</string>
+    <string name="font">sans-serif</string>
+    <string name="YouGo">Вы прошли:</string>
+    <string name="steps_count">6427</string>
+    <string name="steps_txt">шагов</string>
+    <string name="pers_count">63,7%</string>
+    <string name="pers_txt">от сегодняшней цели</string>
+    <string name="profile_name">Oleg Sampara</string>
+    <string name="profile_description">Описание профиля крайне правдоподобное. Вы возможно это читаете, но смысла в этом мало, так как я просто накидал слова, чтобы зполнить пустоту в моем (сердце) TextView.</string>
+    <string name="profile_button">Настроить профиль</string>
+    <string name="number_xample">5</string>
+    <string name="card_hot_bot">Тренировки подряд</string>
+    <string name="card_medal_bot">Топ-5 среди друзей</string>
+    <string name="card_check_bot">Дневной цели пройдено</string>
+    <string name="pers_number_xample">64.3%</string>
+</resources>
