@@ -10,7 +10,7 @@ class FriendProvider(private val accessor: IAccessor) {
     }
 
     suspend fun getFriend(id: String): List<Friend> {
-        //Log.d("TEST", accessor.getBeer(id).Id())
+
         return accessor.getFriend(id)
     }
 }

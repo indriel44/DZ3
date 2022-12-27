@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dz3.R
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -33,6 +34,32 @@ class FriendsFragment: Fragment() {
         return inflater.inflate(R.layout.friends_fragment, container, false)
 
     }
+
+    private fun try_reload(loading:ProgressBar, stubText:TextView){
+        viewLifecycleOwner.lifecycleScope.launch {
+            stubText.isVisible = false
+            loading.isVisible = true
+
+            try {
+                val list = withContext(Dispatchers.IO) { viewModel.getFriends() }
+                friendAdapter.submitList(list)
+                loading.isVisible = false
+                stubText.isVisible = false
+
+            } catch (error: Throwable) {
+                loading.isVisible = false
+                stubText.isVisible = true
+                stubText.text = (resources.getString(R.string.error) + error.message)
+                Toast.makeText(
+                    activity,
+                    resources.getString(R.string.toast_fail),
+                    Toast.LENGTH_SHORT
+                ).show()
+                error.printStackTrace()
+            }
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<RecyclerView>(R.id.recycler).apply {
@@ -63,6 +90,7 @@ class FriendsFragment: Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             loading.isVisible = true
+            //delay(2000)
             try {
                 val list = withContext(Dispatchers.IO) { viewModel.getFriends() }
                 friendAdapter.submitList(list)
@@ -80,12 +108,18 @@ class FriendsFragment: Fragment() {
                         resources.getString(R.string.toast_fail),
                         Toast.LENGTH_SHORT
                     ).show()
+                    error.printStackTrace()
+                    stubText.setOnClickListener { try_reload(loading, stubText) }
                 }
+
+
 
             }
 
 
         }
+
+
 
     }
     companion object {
