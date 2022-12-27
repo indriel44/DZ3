@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.dz3.R
 
@@ -27,7 +26,7 @@ class MainFragment : Fragment() {
         friends_button.setOnClickListener {
             it
             val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.replace(R.id.main_fragment, FriendsFragment.newInstance())
+            transaction?.replace((requireView().parent as ViewGroup).id, FriendsFragment.newInstance())
             transaction?.commit()
 
         }
@@ -35,7 +34,7 @@ class MainFragment : Fragment() {
         profile_button.setOnClickListener {
             it
             val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.replace(R.id.main_fragment, ProfileFragment.newInstance())
+            transaction?.replace((requireView().parent as ViewGroup).id, ProfileFragment.newInstance())
             transaction?.commit()
 
         }

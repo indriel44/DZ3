@@ -28,4 +28,8 @@
     <string name="card_check_bot">Дневной цели пройдено</string>
     <string name="pers_number_xample">64.3%</string>
     <string name="friends">Друзья</string>
+    <string name="error">Error:</string>
+    <string name="toast_fail">Try again later</string>
+    <string name="mainfragment">MainFragment</string>
+    <string name="name_example">Name Example</string>
 </resources>

@@ -122,6 +122,8 @@
         android:id="@+id/recycler"
         android:layout_width="@dimen/map_width"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintStart_toStartOf="@+id/background"
@@ -135,6 +137,34 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="@dimen/_60dp" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/recycler"
+        app:layout_constraintStart_toStartOf="@+id/recycler"
+        app:layout_constraintTop_toBottomOf="@+id/background" />
+
+
+    <TextView
+        android:id="@+id/stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/mainfragment"
+        android:textColor="@color/main"
+        android:textSize="@dimen/_14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/recycler"
+        app:layout_constraintStart_toStartOf="@+id/recycler"
+        app:layout_constraintTop_toBottomOf="@+id/ProgressBar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

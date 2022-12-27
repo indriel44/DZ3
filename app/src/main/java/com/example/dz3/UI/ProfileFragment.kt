@@ -26,7 +26,7 @@ class ProfileFragment: Fragment() {
         friends_button.setOnClickListener {
             it
             val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.replace(R.id.profile_fragment, FriendsFragment.newInstance())
+            transaction?.replace((requireView().parent as ViewGroup).id, FriendsFragment.newInstance())
             transaction?.commit()
 
         }
@@ -34,7 +34,7 @@ class ProfileFragment: Fragment() {
         main_button.setOnClickListener {
             it
             val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.replace(R.id.profile_fragment, MainFragment.newInstance())
+            transaction?.replace((requireView().parent as ViewGroup).id, MainFragment.newInstance())
             transaction?.commit()
 
         }
