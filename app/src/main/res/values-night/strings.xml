@@ -27,4 +27,5 @@
     <string name="card_medal_bot">Топ-5 среди друзей</string>
     <string name="card_check_bot">Дневной цели пройдено</string>
     <string name="pers_number_xample">64.3%</string>
+    <string name="friends">Друзья</string>
 </resources>

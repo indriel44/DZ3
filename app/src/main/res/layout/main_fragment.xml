@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_fragment"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/white">
+
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="@dimen/_42dp"
@@ -133,6 +135,7 @@
         android:layout_height="@dimen/map_height"
         android:layout_marginTop="@dimen/_12sp"
         app:cornerRadius="@dimen/_12sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dist_text"
@@ -152,4 +155,117 @@
         app:layout_constraintBottom_toBottomOf="@+id/map"
         app:layout_constraintEnd_toEndOf="@+id/map"
         app:layout_constraintStart_toStartOf="@+id/map" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_60dp" />
+
+    <ImageView
+        android:id="@+id/friends_img"
+        android:layout_width="@dimen/_28dp"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginStart="@dimen/_56dp"
+        android:layout_marginBottom="@dimen/nb_marg_bot"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/friends" />
+
+    <TextView
+        android:id="@+id/friends_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nb_fontheight"
+        android:text="@string/friends"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nb_fontsize"
+        app:layout_constraintEnd_toEndOf="@+id/friends_img"
+        app:layout_constraintStart_toStartOf="@+id/friends_img"
+        app:layout_constraintTop_toBottomOf="@+id/friends_img" />
+
+    <ImageView
+        android:id="@+id/stats_img"
+        android:layout_width="@dimen/_28dp"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginStart="@dimen/_60dp"
+        android:layout_marginBottom="@dimen/nb_marg_bot"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/friends_img"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/stats" />
+
+    <TextView
+        android:id="@+id/stats_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nb_fontheight"
+        android:text="@string/stats"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nb_fontsize"
+        app:layout_constraintEnd_toEndOf="@+id/stats_img"
+        app:layout_constraintStart_toStartOf="@+id/stats_img"
+        app:layout_constraintTop_toBottomOf="@+id/stats_img" />
+
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="@dimen/_28dp"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginStart="@dimen/_60dp"
+        android:layout_marginBottom="@dimen/nb_marg_bot"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stats_img"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/logo_active" />
+
+    <TextView
+        android:id="@+id/main_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nb_fontheight"
+        android:text="@string/main"
+        android:textColor="@color/main"
+        android:textSize="@dimen/nb_fontsize"
+        app:layout_constraintEnd_toEndOf="@+id/main_img"
+        app:layout_constraintStart_toStartOf="@+id/main_img"
+        app:layout_constraintTop_toBottomOf="@+id/main_img" />
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="@dimen/_28dp"
+        android:layout_height="@dimen/_28dp"
+        android:layout_marginStart="@dimen/_60dp"
+        android:layout_marginBottom="@dimen/nb_marg_bot"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/main_img"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/profile_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nb_fontheight"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nb_fontsize"
+        app:layout_constraintEnd_toEndOf="@+id/profile_img"
+        app:layout_constraintStart_toStartOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+    <TextView
+        android:id="@+id/blank_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60dp"
+        android:background="@color/white"
+        android:text="@string/blank"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

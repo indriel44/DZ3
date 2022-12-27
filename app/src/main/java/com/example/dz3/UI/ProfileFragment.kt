@@ -18,6 +18,27 @@ class ProfileFragment: Fragment() {
         return inflater.inflate(R.layout.profile_fragment, container, false)
 
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // val friends_button: ImageView = view.findViewById(R.id.friends_img)
+        val friends_button: ImageView = view.findViewById(R.id.friends_img)
+        friends_button.setOnClickListener {
+            it
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.profile_fragment, FriendsFragment.newInstance())
+            transaction?.commit()
+
+        }
+        val main_button: ImageView = view.findViewById(R.id.main_img)
+        main_button.setOnClickListener {
+            it
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.profile_fragment, MainFragment.newInstance())
+            transaction?.commit()
+
+        }
+    }
 
     companion object {
         fun newInstance() = ProfileFragment()
