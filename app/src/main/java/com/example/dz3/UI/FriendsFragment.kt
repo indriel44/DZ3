@@ -1,6 +1,7 @@
 package com.example.dz3.UI
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -91,8 +92,10 @@ class FriendsFragment: Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             loading.isVisible = true
             //delay(2000)
-            try {
-                val list = withContext(Dispatchers.IO) { viewModel.getFriends() }
+            try {          //Log.d("TEST", "lol1")
+                val list = withContext(Dispatchers.IO) { viewModel.getFriends()
+               }
+                //Log.d("TEST", "lol2")
                 friendAdapter.submitList(list)
                 loading.isVisible = false
                 stubText.isVisible = false

@@ -19,4 +19,10 @@ class Friend: java.io.Serializable {
     @SerializedName("abv")
     var place: Double =0.01
     fun place()= place
+
+    @SerializedName("id")
+    var id= 1
+    fun id()= id
+
+
 }

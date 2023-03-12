@@ -27,12 +27,22 @@ class FriendViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val url = friend.imageId()
         val name = friend.name()
         val steps = friend.steps().roundToInt()
-        val place = friend.place().roundToInt()
-       // Log.d("TEST", steps.toString())
+        val place = friend.place().roundToInt()-3
+         Log.d("TEST", steps.toString())
         place_txt.text = place.toString()
         name_txt.text = name
         steps_txt.text = steps.toString()
         imageLoader.load(url).into(image).toString()
+        if(place==1){
+        image_medal.setImageResource(R.drawable.medal_1)
+            image_medal.isVisible=true}
+        if(place==2){
+            image_medal.setImageResource(R.drawable.medal_2)
+            image_medal.isVisible=true}
+        if(place==3){
+            image_medal.setImageResource(R.drawable.medal_3)
+        image_medal.isVisible=true}
+
 
     }
 }

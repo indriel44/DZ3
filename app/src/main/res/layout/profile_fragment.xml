@@ -50,9 +50,10 @@
         android:layout_height="@dimen/avatar_diam"
         android:layout_marginStart="@dimen/_18dp"
         android:layout_marginTop="@dimen/_100dp"
+
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="@+id/profile_back_picture"
-        app:layout_constraintTop_toTopOf="@+id/profile_back_color"
-        app:srcCompat="@drawable/avatar" />
+        app:layout_constraintTop_toTopOf="@+id/profile_back_color" />
 
     <TextView
         android:id="@+id/name"
@@ -226,6 +227,17 @@
         app:layout_constraintEnd_toEndOf="@+id/card3"
         app:layout_constraintStart_toStartOf="@+id/card3"
         app:layout_constraintTop_toBottomOf="@+id/number_check" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintEnd_toEndOf="@+id/avatar_back"
+        app:layout_constraintStart_toStartOf="@+id/avatar_back"
+        app:layout_constraintTop_toTopOf="@+id/avatar_back" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
